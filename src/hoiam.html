@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hồi âm của cha mẹ</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg-main:#ffffff;
+  --bg-paper:#fff2c9;
+  --bg-paper-soft:#fff9f4;
+  --border-soft:#e3d8cf;
+  --text-main:#2f2f3a;
+  --text-muted:#6f6f7b;
+  --accent:#f98c67;
+}
+
+*{box-sizing:border-box}
+
+html,body{
+  margin:0;
+  font-family:Inter,sans-serif;
+  background:var(--bg-main);
+  color:var(--text-main);
+  -webkit-font-smoothing:antialiased;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:radial-gradient(circle at center,transparent 60%,rgba(0,0,0,.08));
+  z-index:-1;
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:10;
+  padding:18px 24px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fff6e8 0%,
+      #fff1de 100%
+    );
+
+  border-bottom:1px solid #e3d8cf;
+  backdrop-filter:blur(10px);
+
+  font-weight:600;
+  color:#2f2f3a;
+}
+
+
+main{
+  max-width:900px;
+  margin:0 auto;
+  padding:48px 20px;
+}
+
+
+h1{
+  font-family:"Cormorant Garamond",serif;
+  font-size:32px;
+  font-weight:700;
+}
+
+.sub{
+  margin-top:6px;
+  color:var(--text-muted);
+}
+
+.paper{
+  margin-top:28px;
+  background:var(--bg-paper);
+  border-radius:18px;
+  padding:22px;
+  box-shadow:0 10px 28px rgba(0,0,0,.04);
+  animation:float 6s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-6px)}
+  100%{transform:translateY(0)}
+}
+
+textarea{
+  width:100%;
+  border-radius:14px;
+  border:1px solid var(--border-soft);
+  padding:16px;
+  font-family:"Cormorant Garamond",serif;
+  font-size:17px;
+  line-height:1.8;
+  resize:vertical;
+  background:#ffffffb3;
+}
+
+textarea:focus{
+  outline:none;
+  box-shadow:0 0 0 4px rgba(249,140,103,.18);
+}
+
+.actions{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:12px;
+  font-size:14px;
+  color:var(--text-muted);
+}
+
+button{
+  border:none;
+  cursor:pointer;
+  border-radius:999px;
+  padding:10px 20px;
+  font-weight:600;
+  color:white;
+  background:linear-gradient(180deg,#f98c67,#ffb38a);
+  box-shadow:0 10px 28px rgba(249,140,103,.35);
+  transition:.25s;
+}
+
+button:hover{
+  transform:translateY(-2px);
+}
+
+.list{
+  margin-top:40px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.letter{
+  background:#ffffffb3;
+  border:1px solid var(--border-soft);
+  border-radius:16px;
+  padding:20px;
+  box-shadow:0 6px 20px rgba(0,0,0,.04);
+  font-family:"Cormorant Garamond",serif;
+  font-style:italic;
+  line-height:1.8;
+}
+
+.time{
+  margin-top:10px;
+  text-align:right;
+  font-size:12px;
+  color:var(--text-muted);
+}
+/* ===== HEADER NAV ===== */
+.site-header{
+  background:linear-gradient(180deg,#fff6e8,#fff1de);
+  border-bottom:1px solid var(--border-soft);
+}
+
+.header-inner{
+  max-width:1100px;
+  margin:0 auto;
+  padding:18px 20px;
+  display:flex;
+  align-items:center;
+  gap:24px;
+}
+
+.logo{
+  font-weight:600;
+  text-decoration:none;
+  color:var(--text-main);
+  white-space:nowrap;
+}
+
+.nav{
+  margin-left:auto;
+  display:flex;
+  gap:20px;
+}
+
+.nav a{
+  text-decoration:none;
+  color:var(--text-muted);
+  font-size:15px;
+  transition:.2s;
+}
+
+.nav a:hover{
+  color:var(--text-main);
+}
+
+.nav a.active{
+  color:var(--text-main);
+  font-weight:600;
+  position:relative;
+}
+
+.nav a.active::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-6px;
+  height:2px;
+  background:var(--accent);
+  border-radius:2px;
+}
+
+/* MOBILE */
+@media (max-width:700px){
+  .nav{
+    display:none;
+  }
+}
+
+footer{
+  margin-top:48px;
+  text-align:center;
+  font-size:13px;
+  color:var(--text-muted);
+}
+</style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">KHOẢNH KHẮC THẤU HIỂU</a>
+
+    <nav class="nav">
+      <a href="index.html">Trang chủ</a>
+      <a href="chuyen.html">Chuyện của con</a>
+      <a href="thanham.html">Thanh âm của con</a>
+      <a href="hoiam.html" class="active">Hồi âm</a>
+    </nav>
+  </div>
+</header>
+
+
+<main>
+  <h1>Hồi âm của cha mẹ</h1>
+  <div class="sub">Viết vài dòng cho con. Không cần tên. Không cần email.</div>
+
+  <section class="paper">
+    <textarea id="input" rows="6" maxlength="2000"
+      placeholder="Viết ở đây…"></textarea>
+
+    <div class="actions">
+      <span id="count">0 / 2000</span>
+      <button id="send">Gửi</button>
+    </div>
+  </section>
+
+  <section class="list" id="list"></section>
+
+  <footer>Những dòng chữ nhỏ — nhưng có thể theo con cả đời.</footer>
+</main>
+
+<!-- FIREBASE -->
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import {
+  getFirestore, collection, addDoc,
+  query, orderBy, onSnapshot, serverTimestamp
+} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+/* 🔥 DÁN CONFIG FIREBASE CỦA MÀY */
+const firebaseConfig = {
+  apiKey: "XXX",
+  authDomain: "XXX",
+  projectId: "XXX"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+const input = document.getElementById("input");
+const count = document.getElementById("count");
+const send = document.getElementById("send");
+const list = document.getElementById("list");
+
+input.addEventListener("input",()=>{
+  count.textContent = `${input.value.length} / 2000`;
+});
+
+send.onclick = async ()=>{
+  const text = input.value.trim();
+  if(!text) return;
+
+  await addDoc(collection(db,"letters"),{
+    content:text,
+    createdAt:serverTimestamp()
+  });
+
+  input.value="";
+  count.textContent="0 / 2000";
+};
+
+const q = query(
+  collection(db,"letters"),
+  orderBy("createdAt","desc")
+);
+
+onSnapshot(q,(snap)=>{
+  list.innerHTML="";
+  snap.forEach(doc=>{
+    const d = doc.data();
+    const div = document.createElement("div");
+    div.className="letter";
+    div.innerHTML=`
+      <div>${escapeHtml(d.content).replace(/\n/g,"<br>")}</div>
+      <div class="time">${
+        d.createdAt
+          ? new Date(d.createdAt.seconds*1000).toLocaleString("vi-VN")
+          : ""
+      }</div>
+    `;
+    list.appendChild(div);
+  });
+});
+
+function escapeHtml(s){
+  return s.replace(/[&<>"']/g,m=>({
+    "&":"&amp;","<":"&lt;",">":"&gt;",
+    "\"":"&quot;","'":"&#039;"
+  }[m]));
+}
+</script>
+
+</body>
+</html>
