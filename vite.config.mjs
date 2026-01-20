@@ -5,7 +5,7 @@ import { viteStaticCopy } from "vite-plugin-static-copy";
 export default defineConfig({
   base: "/",               // ⚠️ NETLIFY BẮT BUỘC LÀ "/"
   root: "src",
-
+  publicDir: "../public",
   build: {
     outDir: "../dist",
     emptyOutDir: true,
