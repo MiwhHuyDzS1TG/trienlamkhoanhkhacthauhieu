@@ -1,11 +1,9 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
-import { viteStaticCopy } from "vite-plugin-static-copy";
 
 export default defineConfig({
-  base: "/",               // ⚠️ NETLIFY BẮT BUỘC LÀ "/"
+  base: "/trienlamkhoanhkhacthauhieu/",
   root: "src",
-  publicDir: "../public",
   build: {
     outDir: "../dist",
     emptyOutDir: true,
@@ -13,17 +11,9 @@ export default defineConfig({
       input: {
         main: resolve("src/index.html"),
         chuyen: resolve("src/chuyen.html"),
-        thanham: resolve("src/thanham.html"),
         hoiam: resolve("src/hoiam.html"),
-      }
-    }
+        thanham: resolve("src/thanham.html"),
+      },
+    },
   },
-
-  plugins: [
-    viteStaticCopy({
-      targets: [
-        { src: "assets/**/*", dest: "assets" }
-      ]
-    })
-  ]
 });
