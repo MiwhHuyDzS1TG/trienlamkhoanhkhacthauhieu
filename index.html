@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KHOẢNH KHẮC THẤU HIỂU — Triển lãm</title>
+  <meta name="description" content="Một không gian cảm xúc do học sinh sáng tạo." />
+  <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap">
+
+  <script type="module" crossorigin src="./assets/form-Bfsi7gnG.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/form-HhoqGdiY.css">
+</head>
+<body class="theme-home antialiased text-textmain">
+
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-white/60 h-[84px] flex items-center px-6 md:px-10 border-b border-bordermuted shadow-[0_5px_25px_rgba(0,0,0,0.04)]">
+    <a href="index.html" class="text-[20px] md:text-[22px] font-semibold tracking-wide select-none">KHOẢNH KHẮC THẤU HIỂU</a>
+
+    <!-- desktop nav -->
+    <nav class="hidden md:flex ml-auto items-center gap-8 text-[15px]">
+      <a href="index.html" class="nav-link-active">Trang chủ</a>
+      <a href="chuyen.html" class="nav-link">Chuyện của con</a>
+      <a href="thanham.html" class="nav-link">Thanh âm của con</a>
+      <a href="hoiam.html" class="nav-link">Hồi âm</a>
+    </nav>
+
+    <!-- mobile menu button -->
+    <button id="mobileMenuBtn" class="md:hidden ml-auto text-2xl text-textmain focus:outline-none" aria-label="Mở menu">☰</button>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div id="mobileDrawer" class="hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-50">
+    <div class="drawer-panel">
+      <button id="drawerClose" class="self-end text-2xl text-textmain">✕</button>
+      <a href="index.html" class="drawer-link">Trang chủ</a>
+      <a href="chuyen.html" class="drawer-link">Chuyện của con</a>
+      <a href="thanham.html" class="drawer-link">Thanh âm của con</a>
+      <a href="hoiam.html" class="drawer-link">Hồi âm</a>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <main class="max-w-[1200px] mx-auto px-6 md:px-8 py-16 md:py-20">
+
+    <!-- HERO -->
+    <section id="hero" class="relative rounded-2xl p-10 md:p-14 hero-paper overflow-hidden shadow-warm" data-animate="fade-up">
+      <div class="relative z-10 max-w-2xl">
+        <h1 class="hero-title-serif hero-title-size font-semibold text-textmain">
+          KHOẢNH KHẮC
+          <span class="block mt-1">THẤU HIỂU</span>
+        </h1>
+
+        <p class="mt-6 text-textmuted text-base md:text-lg w-full md:w-[420px] leading-relaxed">
+          Một không gian cảm xúc do học sinh sáng tạo.
+        </p>
+
+        <a href="#rooms" class="btn-premium mt-8 md:mt-10 inline-flex items-center gap-3">Vào xem triển lãm</a>
+      </div>
+
+      <!-- hero texture (id used for responsive) -->
+      <div id="heroTexture"
+        class="absolute right-[10px] top-[-20px] w-[400px] h-[400px] opacity-[0.58] pointer-events-none select-none"
+        style="
+          background-image:url('./assets/hero-texture-CKktT_j-.webp');
+          background-size:130%;
+          background-position:center;
+          background-repeat:no-repeat;
+          mix-blend-mode:multiply;
+          filter:contrast(1.25) brightness(1.15);
+          transform:rotate(-3deg);
+        ">
+      </div>
+
+
+    </section>
+
+    <!-- ROOMS -->
+    <section id="rooms" class="grid md:grid-cols-3 gap-10 mt-12 md:mt-[90px]">
+      <a href="chuyen.html" class="room-panel group">
+        <div class="room-frame h-[190px] mb-5">
+          <img src="./assets/cam-DRA-MVdw.jpg" alt="Chuyện của con" class="w-full h-full object-cover transition duration-500" />
+        </div>
+        <h3 class="text-[22px] font-semibold" style="color:#FFB38A">Chuyện của con</h3>
+        <p class="text-textmuted text-[14px] mt-2">Hình art, tranh, thư — gallery sáng tạo</p>
+        <div class="room-aura" style="right:-40px;bottom:-20px;width:230px;height:230px;background:#FFB38A;"></div>
+      </a>
+
+      <a href="thanham.html" class="room-panel group">
+        <div class="room-frame h-[190px] mb-5">
+          <img src="./assets/xanh-Bkgk72Cq.jpg" alt="Thanh âm của con" class="w-full h-full object-cover transition duration-500" />
+        </div>
+        <h3 class="text-[22px] font-semibold text-xanh">Thanh âm của con</h3>
+        <p class="text-textmuted text-[14px] mt-2">Audio & video chia sẻ theo cảm xúc</p>
+        <div class="room-aura" style="left:-40px;bottom:-10px;width:200px;height:200px;background:#6CC3C5;"></div>
+      </a>
+
+      <a href="hoiam.html" class="room-panel group">
+        <div class="room-frame h-[190px] mb-5">
+          <img src="./assets/vang-BTMZQ2th.jpg" alt="Hồi âm của cha mẹ" class="w-full h-full object-cover transition duration-500" />
+        </div>
+        <h3 class="text-[22px] font-semibold" style="color:#FFD66B">Hồi âm của cha mẹ</h3>
+        <p class="text-textmuted text-[14px] mt-2">Góc viết thư — chia sẻ & cảm nhận</p>
+        <div class="room-aura" style="left:10px;top:-30px;width:170px;height:170px;background:#FFD66B;"></div>
+      </a>
+    </section>
+
+    <!-- CURATOR NOTE -->
+    <section class="mt-[60px] md:mt-[90px] w-full md:w-[540px]">
+      <p class="italic text-textmuted text-[15px] leading-[1.8]">
+        Những khoảnh khắc mong manh, những dòng cảm xúc, những bức tranh còn thơm mùi giấy…
+        Tất cả được đặt vào đây—không phải để nhìn, mà để cảm.
+      </p>
+    </section>
+
+    <footer class="mt-[80px] md:mt-[110px] text-sm text-textmuted">
+      <div class="border-t border-divider pt-6">© 2025 — Minh Huy</div>
+    </footer>
+  </main>
+
+
+<div class="particle"></div>
+<div class="particle"></div>
+<div class="particle"></div>
+
+</body>
+</html>

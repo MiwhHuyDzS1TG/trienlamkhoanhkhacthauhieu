@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Thanh âm của con — Premium</title>
+  <meta name="description" content="Podcast cảm xúc — thiết kế theo phong cách Spotify Premium." />
+
+  <!-- FONT -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap">
+
+  <!-- ASSET BUILD -->
+  <script type="module" crossorigin src="./assets/form-Bfsi7gnG.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/form-HhoqGdiY.css">
+
+  <!-- EXTRA CSS FOR STATS + COMMENTS -->
+  <style>
+    .podcast-stats{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      margin-top:12px;
+      font-size:14px;
+      color:#6f6f7b;
+    }
+
+    .like-btn{
+      border:none;
+      background:#fff;
+      border-radius:999px;
+      padding:4px 12px;
+      font-size:14px;
+      cursor:pointer;
+      box-shadow:0 4px 12px rgba(0,0,0,.08);
+      transition:.2s;
+    }
+
+    .like-btn.liked{
+      background:linear-gradient(180deg,#f98c67,#ffb38a);
+      color:#fff;
+    }
+
+    .podcast-comments{
+      margin-top:14px;
+      padding-top:12px;
+      border-top:1px solid #e3d8cf;
+    }
+
+    .comment{
+      font-size:14px;
+      line-height:1.6;
+      padding:8px 12px;
+      background:#ffffffb3;
+      border-radius:10px;
+      margin-bottom:6px;
+    }
+
+    .comment-input{
+      display:flex;
+      gap:8px;
+      margin-top:8px;
+    }
+
+    .comment-input input{
+      flex:1;
+      border-radius:999px;
+      border:1px solid #e3d8cf;
+      padding:8px 14px;
+      font-size:14px;
+    }
+
+    .comment-input button{
+      border:none;
+      border-radius:999px;
+      padding:8px 16px;
+      font-size:14px;
+      background:linear-gradient(180deg,#f98c67,#ffb38a);
+      color:#fff;
+      cursor:pointer;
+    }
+  </style>
+</head>
+
+<body class="theme-audio antialiased text-textmain">
+
+<!-- HEADER -->
+<header class="sticky top-0 z-50 backdrop-blur-xl bg-white/70 h-[78px] flex items-center px-6 md:px-10 border-b border-bordermuted shadow-sm">
+  <a href="index.html" class="text-[18px] md:text-[20px] font-semibold select-none">
+    KHOẢNH KHẮC THẤU HIỂU
+  </a>
+
+  <nav class="hidden md:flex ml-auto items-center gap-6">
+    <a href="index.html" class="nav-link">Trang chủ</a>
+    <a href="chuyen.html" class="nav-link">Chuyện của con</a>
+    <a href="thanham.html" class="nav-link-active">Thanh âm của con</a>
+    <a href="hoiam.html" class="nav-link">Hồi âm</a>
+  </nav>
+</header>
+
+<!-- MAIN -->
+<main class="max-w-[900px] mx-auto px-6 md:px-8 py-12">
+
+  <header class="mb-8">
+    <h1 class="text-3xl font-serif font-semibold">Thanh âm của con</h1>
+    <p class="text-textmuted mt-2">Những tâm sự, cảm xúc — được kể bằng âm thanh.</p>
+  </header>
+
+  <section class="space-y-6">
+
+    <!-- PODCAST ITEM TEMPLATE -->
+    <article class="spotify-card premium-card" data-id="0">
+      <div class="premium-thumb"></div>
+      <div class="flex-1">
+        <h3 class="premium-title">Podcast #1 — Miền nhớ</h3>
+        <p class="premium-sub">Một chút hoài niệm, một chút dịu dàng…</p>
+        <div class="premium-wave"></div>
+        <audio src="/assets/audio/Podcast1.m4a"></audio>
+
+        <div class="podcast-stats">
+          <span class="views"></span>
+          <button class="like-btn">❤️ <span class="like-count"></span></button>
+        </div>
+
+        <div class="podcast-comments">
+          <div class="comment-list"></div>
+          <div class="comment-input">
+            <input type="text" placeholder="Viết cảm nhận của bạn…" />
+            <button>Gửi</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="spotify-card premium-card" data-id="1">
+      <div class="premium-thumb"></div>
+      <div class="flex-1">
+        <h3 class="premium-title">Podcast #2 — Khoảng lặng</h3>
+        <p class="premium-sub">Khi lòng muốn được nghỉ ngơi.</p>
+        <div class="premium-wave"></div>
+        <audio src="/assets/audio/Podcast2.mp3"></audio>
+
+        <div class="podcast-stats">
+          <span class="views"></span>
+          <button class="like-btn">❤️ <span class="like-count"></span></button>
+        </div>
+
+        <div class="podcast-comments">
+          <div class="comment-list"></div>
+          <div class="comment-input">
+            <input type="text" placeholder="Viết cảm nhận của bạn…" />
+            <button>Gửi</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="spotify-card premium-card" data-id="2">
+      <div class="premium-thumb"></div>
+      <div class="flex-1">
+        <h3 class="premium-title">Podcast #3 — Phía sau nỗi buồn</h3>
+        <p class="premium-sub">Ở cuối con đường là ánh sáng.</p>
+        <div class="premium-wave"></div>
+        <audio src="/assets/audio/Podcast3.m4a"></audio>
+
+        <div class="podcast-stats">
+          <span class="views"></span>
+          <button class="like-btn">❤️ <span class="like-count"></span></button>
+        </div>
+
+        <div class="podcast-comments">
+          <div class="comment-list"></div>
+          <div class="comment-input">
+            <input type="text" placeholder="Viết cảm nhận của bạn…" />
+            <button>Gửi</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </section>
+</main>
+
+<!-- FAKE DATA + LOCAL COMMENT -->
+<script>
+const fakeData = [
+  { views: 23, likes: 5, comments: ["Nghe rất nhẹ.", "Đoạn cuối chạm thật."] },
+  { views: 18, likes: 3, comments: ["Nghe lúc tối là hợp nhất."] },
+  { views: 31, likes: 7, comments: ["Có đoạn phải dừng lại một chút."] }
+];
+
+document.querySelectorAll(".premium-card").forEach(card=>{
+  const id = card.dataset.id;
+  const key = "podcast_demo_" + id;
+
+  let data = JSON.parse(localStorage.getItem(key)) || fakeData[id];
+  localStorage.setItem(key, JSON.stringify(data));
+
+  const views = card.querySelector(".views");
+  const likeBtn = card.querySelector(".like-btn");
+  const likeCount = card.querySelector(".like-count");
+  const commentList = card.querySelector(".comment-list");
+  const input = card.querySelector("input");
+  const send = card.querySelector(".comment-input button");
+
+  views.textContent = `👁 ${data.views} lượt nghe`;
+  likeCount.textContent = data.likes;
+
+  if(data.liked) likeBtn.classList.add("liked");
+
+  likeBtn.onclick = ()=>{
+    data.liked = !data.liked;
+    data.likes += data.liked ? 1 : -1;
+    likeBtn.classList.toggle("liked");
+    likeCount.textContent = data.likes;
+    localStorage.setItem(key, JSON.stringify(data));
+  };
+
+  const renderComments = ()=>{
+    commentList.innerHTML = "";
+    data.comments.forEach(c=>{
+      const div = document.createElement("div");
+      div.className = "comment";
+      div.textContent = c;
+      commentList.appendChild(div);
+    });
+  };
+
+  renderComments();
+
+  send.onclick = ()=>{
+    if(!input.value.trim()) return;
+    data.comments.unshift(input.value.trim());
+    input.value = "";
+    localStorage.setItem(key, JSON.stringify(data));
+    renderComments();
+  };
+});
+</script>
+
+</body>
+</html>

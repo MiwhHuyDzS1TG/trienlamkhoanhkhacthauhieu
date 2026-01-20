@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chuyện của con — Gallery</title>
+  <meta name="description" content="Gallery nghệ thuật: tranh, thư & sáng tạo." />
+<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap">
+
+
+  <!-- pdf.js (auto thumbnail) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script type="module" crossorigin src="./assets/form-Bfsi7gnG.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/form-HhoqGdiY.css">
+</head>
+
+<body class="antialiased bg-white text-textmain">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-white/60 h-[78px] flex items-center px-6 md:px-10 border-b border-bordermuted">
+    <a href="index.html" class="text-[18px] md:text-[20px] font-semibold tracking-wide select-none">KHOẢNH KHẮC THẤU HIỂU</a>
+
+    <nav class="hidden md:flex ml-auto items-center gap-6">
+      <a href="index.html" class="nav-link">Trang chủ</a>
+      <a href="chuyen.html" class="nav-link-active">Chuyện của con</a>
+      <a href="thanham.html" class="nav-link">Thanh âm của con</a>
+      <a href="hoiam.html" class="nav-link">Hồi âm</a>
+    </nav>
+
+    <button id="mobileMenuBtn" class="md:hidden ml-auto text-2xl text-textmain focus:outline-none">☰</button>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div id="mobileDrawer" class="hidden fixed inset-0 bg-black/40 z-50">
+    <div class="drawer-panel">
+      <button id="drawerClose" class="self-end text-2xl text-textmain mb-4">✕</button>
+      <a href="index.html" class="drawer-link">Trang chủ</a>
+      <a href="chuyen.html" class="drawer-link">Chuyện của con</a>
+      <a href="thanham.html" class="drawer-link">Thanh âm của con</a>
+      <a href="hoiam.html" class="drawer-link">Hồi âm</a>
+    </div>
+  </div>
+
+  <main class="max-w-[1200px] mx-auto px-6 md:px-8 py-12">
+
+    <header class="mb-6">
+      <h1 class="text-3xl font-serif font-semibold">Chuyện của con</h1>
+      <p class="text-textmuted mt-2">Gallery nghệ thuật: tranh, thư & sáng tạo.</p>
+    </header>
+
+    <!-- FILTER CONTROLS -->
+    <div class="flex items-center gap-3 mb-6">
+      <button class="filter-btn btn-active px-4 py-2 rounded-full" data-filter="all">Tất cả</button>
+      <button class="filter-btn px-4 py-2 rounded-full" data-filter="image">Ảnh</button>
+      <button class="filter-btn px-4 py-2 rounded-full" data-filter="pdf">PDF</button>
+      <!-- optional search -->
+      <div class="ml-auto">
+        <input id="gallerySearch" type="search" placeholder="Tìm theo tên/ tác giả..." class="px-3 py-2 rounded-lg border border-bordermuted text-sm w-full md:w-[280px]" />
+      </div>
+    </div>
+
+    <!-- GALLERY GRID (card style) -->
+    <section id="galleryGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+    <!-- IMAGE 1 -->
+    <figure class="gallery-item card-item" data-type="image" data-full="/assets/gallery/pic1-large.jpg" data-title="Khu vườn tuổi thơ">
+        <div class="card-thumb-wrap">
+        <img class="card-thumb" src="./assets/pic1-thumb-CT0KH8ZP.jpg" alt="" loading="lazy" />
+        </div>
+        <figcaption class="mt-2">
+        <strong class="block text-[15px] font-medium"></strong>
+        </figcaption>
+    </figure>
+
+    <!-- IMAGE 2 -->
+    <figure class="gallery-item card-item" data-type="image" data-full="/assets/gallery/pic2-large.jpg" data-title="Thư tay mùa thu">
+        <div class="card-thumb-wrap">
+        <img class="card-thumb" src="./assets/pic2-thumb-BeLp1A-a.jpg" alt="" loading="lazy" />
+        </div>
+        <figcaption class="mt-2">
+        <strong class="block text-[15px] font-medium"></strong>
+        </figcaption>
+    </figure>
+
+    <!-- PDF 1 -->
+    <figure class="gallery-item card-item" data-type="pdf" data-pdf="/assets/gallery/doc1.pdf" data-title="Nhật ký cảm xúc">
+        <div class="card-thumb-wrap">
+        <canvas class="pdf-thumb"></canvas>
+        <div class="pdf-badge">PDF</div>
+        </div>
+        <figcaption class="mt-2">
+        <strong class="block text-[15px] font-medium">Bằng Lăng (PDF)</strong>
+        </figcaption>
+    </figure>
+
+    <!-- PDF 2 -->
+    <figure class="gallery-item card-item" data-type="pdf" data-pdf="/assets/gallery/doc2.pdf" data-title="Lưu bút lớp 9">
+        <div class="card-thumb-wrap">
+        <canvas class="pdf-thumb"></canvas>
+        <div class="pdf-badge">PDF</div>
+        </div>
+        <figcaption class="mt-2">
+        <strong class="block text-[15px] font-medium">Gửi bố mẹ (PDF)</strong>
+        </figcaption>
+    </figure>
+
+    </section>
+
+
+    <footer class="mt-8 text-sm text-textmuted">
+      <a href="index.html">← Trở về Trang chủ</a>
+    </footer>
+  </main>
+
+  <!-- LIGHTBOX TEMPLATE: appended by gallery.js -->
+
+</body>
+</html>
