@@ -4,6 +4,9 @@ import { resolve } from "path";
 export default defineConfig({
   base: "/trienlamkhoanhkhacthauhieu/",
   root: "src",
+
+  assetsInclude: ["**/*.mp3", "**/*.m4a"],
+
   build: {
     outDir: "../dist",
     emptyOutDir: true,
@@ -13,7 +16,7 @@ export default defineConfig({
         chuyen: resolve("src/chuyen.html"),
         hoiam: resolve("src/hoiam.html"),
         thanham: resolve("src/thanham.html"),
-      },
-    },
-  },
+      }
+    }
+  }
 });
