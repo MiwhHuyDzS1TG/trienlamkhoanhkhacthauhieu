@@ -3,7 +3,7 @@ import { resolve } from "path";
 import { viteStaticCopy } from "vite-plugin-static-copy";
 
 export default defineConfig({
-  base: "/",          // chuẩn cho Vercel + custom domain
+  base: "/",               // ⚠️ NETLIFY BẮT BUỘC LÀ "/"
   root: "src",
 
   build: {
