@@ -3,17 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "npx vite",
-    "build": "npx vite build",
-    "preview": "npx vite preview"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-
   "devDependencies": {
-    "autoprefixer": "^10.4.14",
-    "gh-pages": "^6.3.0",
-    "postcss": "^8.4.24",
-    "tailwindcss": "latest",
     "vite": "^5.1.0",
-    "vite-plugin-static-copy": "^3.1.4"
+    "tailwindcss": "latest",
+    "postcss": "^8.4.24",
+    "autoprefixer": "^10.4.14"
   }
 }
