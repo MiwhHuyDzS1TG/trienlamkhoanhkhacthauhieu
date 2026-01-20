@@ -1,5 +1,9 @@
+import { defineConfig } from "vite";
+import { resolve } from "path";
+import { viteStaticCopy } from "vite-plugin-static-copy";
+
 export default defineConfig({
-  base: "/",       // ← QUAN TRỌNG
+  base: "/",          // chuẩn cho Vercel + custom domain
   root: "src",
 
   build: {
@@ -17,7 +21,9 @@ export default defineConfig({
 
   plugins: [
     viteStaticCopy({
-      targets: [{ src: "assets/**/*", dest: "assets" }]
+      targets: [
+        { src: "assets/**/*", dest: "assets" }
+      ]
     })
   ]
 });
